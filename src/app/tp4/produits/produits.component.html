@@ -1,0 +1,22 @@
+<div class="mainpage">
+  <div class="card">
+    <p-table [value]="Produits" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Creation Date</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td>{{ product.idProduit }}</td>
+          <td>{{ product.nomProduit }}</td>
+          <td>{{ product.prixProduit }}</td>
+          <td>{{ product.dateCreation }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

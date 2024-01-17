@@ -1,0 +1,14 @@
+<h2>Création d'un nouveau compte</h2>
+<div class="form-split">
+  <label>Email </label>
+  <input pInputText type="text" size="30" #email /><br />
+</div>
+
+<div class="form-split">
+  <label>Mot de passe</label>
+  <input pInputText type="password" #pass /><br />
+</div>
+
+<p-button type="button" (click)="creerCompte(email.value, pass.value)">
+  Créer Nouveau Compte
+</p-button>

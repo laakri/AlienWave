@@ -1,0 +1,77 @@
+<div class="container">
+  <div>
+    <h2>Add User :</h2>
+  </div>
+  <form #myform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-split">
+      <label>Name</label>
+      <input
+        type="text"
+        pInputText
+        name="name"
+        class="form-control"
+        [(ngModel)]="formModel.name"
+        #name="ngModel"
+        required
+      />
+    </div>
+    <div class="form-split">
+      <label>prenom</label>
+      <input
+        type="text"
+        pInputText
+        name="prenom"
+        class="form-control"
+        [(ngModel)]="formModel.prenom"
+        #prenom="ngModel"
+        required
+      />
+    </div>
+    <div class="form-split">
+      <label>Email</label>
+      <input
+        type="email"
+        pInputText
+        name="email"
+        class="form-control"
+        [(ngModel)]="formModel.email"
+        #email="ngModel"
+        required
+      />
+    </div>
+    <div class="form-split">
+      <label>Password</label>
+      <input
+        type="password"
+        pInputText
+        name="pass1"
+        class="form-control"
+        [(ngModel)]="formModel.pass1"
+        #pass1="ngModel"
+        required
+      />
+    </div>
+    <div class="form-split">
+      <label>Confirm Password</label>
+      <input
+        type="password"
+        pInputText
+        name="pass2"
+        class="form-control"
+        [(ngModel)]="formModel.pass2"
+        #pass2="ngModel"
+        required
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <div *ngIf="pass2.errors?.['passwordMismatch']" class="text-danger">
+        Passwords do not match.
+      </div>
+    </div>
+
+    <div class="button-section">
+      <button type="submit" class="buttonn" [disabled]="myform.invalid">
+        Ajouter
+      </button>
+    </div>
+  </form>
+</div>

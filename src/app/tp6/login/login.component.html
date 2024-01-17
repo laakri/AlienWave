@@ -1,0 +1,14 @@
+<h2>Login</h2>
+<div class="form-split">
+  <label>Email </label>
+  <input pInputText type="text" size="30" #email /><br />
+</div>
+
+<div class="form-split">
+  <label>Mot de passe</label>
+  <input pInputText type="password" #pass /><br />
+</div>
+
+<p-button type="button" (click)="login(email.value, pass.value)">
+  Login
+</p-button>

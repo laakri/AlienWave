@@ -1,0 +1,44 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un Produit :</h2>
+  </div>
+  <form>
+    <div class="form-split">
+      <label>ID Produit</label>
+      <input
+        type="text"
+        pInputText
+        [(ngModel)]="newProduit.idProduit"
+        name="idProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="form-split">
+      <label>Nom Produit</label>
+      <input
+        type="text"
+        pInputText
+        [(ngModel)]="newProduit.nomProduit"
+        name="nomProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="form-split">
+      <label>Prix Produit</label>
+      <input
+        type="number"
+        pInputText
+        [(ngModel)]="newProduit.prixProduit"
+        name="prixProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="form-split">
+      <label>Date création</label>
+      <p-calendar [(ngModel)]="date" [showIcon]="true"></p-calendar>
+    </div>
+    <div class="button-section">
+      <p-button type="submit" (click)="addProduit()"> Ajouter </p-button>
+    </div>
+  </form>
+</div>

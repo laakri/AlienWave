@@ -1,0 +1,24 @@
+.sideBar-content{
+    min-width: 200px;
+    height: 100%;
+    margin: 10px 0;
+    border: rgb(192, 192, 192) solid 1px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.item{
+    padding-left: 15px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.item a {  
+    text-decoration: none;
+}
